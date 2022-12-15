@@ -673,20 +673,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 925b3db3d82ba29429b9bcfd4e6e13c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  carName: Car2
+  carName: Car1
   carData:
   - name: Engine
     carObject:
     - name: V4
-      cost: 600
+      cost: 200
     - name: V8
-      cost: 1000
+      cost: 800
   - name: ChassiePaint
     carObject:
-    - name: Black
-      cost: 50
-    - name: White
-      cost: 100
+    - name: Red
+      cost: 10
+    - name: Blue
+      cost: 20
 --- !u!1 &1187819057
 GameObject:
   m_ObjectHideFlags: 0
