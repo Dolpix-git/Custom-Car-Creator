@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<ArrayOfCar xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Car>
+    <key>Engine</key>
+    <value>
+      <CarObject>
+        <name>V4</name>
+        <cost>200</cost>
+      </CarObject>
+      <CarObject>
+        <name>V8</name>
+        <cost>800</cost>
+      </CarObject>
+    </value>
+  </Car>
+  <Car>
+    <key>ChassiePaint</key>
+    <value>
+      <CarObject>
+        <name>Red</name>
+        <cost>10</cost>
+      </CarObject>
+      <CarObject>
+        <name>Blue</name>
+        <cost>20</cost>
+      </CarObject>
+    </value>
+  </Car>
+</ArrayOfCar>
