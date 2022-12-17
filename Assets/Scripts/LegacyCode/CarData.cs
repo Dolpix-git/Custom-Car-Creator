@@ -10,27 +10,27 @@ public class CarData : MonoBehaviour{
 }
 
 [Serializable]
-public struct tagWithCost
+public struct TagWithCost
 {
     public string tag;
     public float cost;
 }
 [Serializable]
-public struct colorWithCost
+public struct ColorWithCost
 {
     public string tag;
     public float cost;
     public Color color;
 }
 [Serializable]
-public struct wheelWithcost
+public struct WheelWithcost
 {
     public string tag;
     public float cost;
     public GameObject wheel;
 }
 [Serializable]
-public struct modelTypes
+public struct ModelTypes
 {
     public string tag;
     public float cost;
@@ -50,12 +50,12 @@ public class Model{
     public Material interiorPaint;
 
 
-    public modelTypes[] modelTypes;
-    public colorWithCost[] paint;
-    public wheelWithcost[] wheels;
-    public tagWithCost[] towHitch;
-    public colorWithCost[] interior;
-    public tagWithCost[] seatingLayout;
-    public tagWithCost[] enhancedAutoPilot;
-    public tagWithCost[] FSD;
+    public ModelTypes[] modelTypes;
+    public ColorWithCost[] paint;
+    public WheelWithcost[] wheels;
+    public TagWithCost[] towHitch;
+    public ColorWithCost[] interior;
+    public TagWithCost[] seatingLayout;
+    public TagWithCost[] enhancedAutoPilot;
+    public TagWithCost[] FSD;
 }
