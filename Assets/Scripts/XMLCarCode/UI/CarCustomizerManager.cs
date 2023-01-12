@@ -51,6 +51,10 @@ public class CarCustomizerManager : MonoBehaviour{
             GameObject newPrefab = Instantiate(carsChoicePrefab);
             newPrefab.transform.SetParent(carCustomScreen.transform, false);
             newPrefab.name = keys;
+
+            //Too Do: Add buttons linking to function
+
+
         }
     }
 
@@ -90,6 +94,7 @@ public class CarCustomizerManager : MonoBehaviour{
     }
 
     public void SetCurrentDataSet(FileInfo i){
+        Debug.Log("TEST");
         CarXMLManager.Instance.ChooseDatabase(i);
         DisplayCarsChoices();
     }

@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 753f5205892aab34a90c6bf4bf6f49ed, type: 3}
+  m_Name: CubeCar
+  m_EditorClassIdentifier: 
+  carModelPrefab: {fileID: 5569968305047468768, guid: 44afb2b664030d4429fa1f1b19458167,
+    type: 3}
+  carName: Model3
+  cost: 0
+  carPartsLocationDict:
+  - key: Wheel
+    location:
+    - {x: 0.7, y: 0, z: 0.5}
+    - {x: 0.7, y: 0, z: -0.5}
+    - {x: -0.7, y: 0, z: 0.5}
+    - {x: -0.7, y: 0, z: -0.5}
+    rotation:
+    - 0
+    - 180
+    - 0
+    - 180
+  - key: Hat
+    location:
+    - {x: 0, y: 1, z: 0}
+    rotation:
+    - 0
+  carPartsDict:
+  - key: Wheel
+    options:
+    - {fileID: 11400000, guid: d89e0775741758e4ebbf1765726c31d0, type: 2}
+    - {fileID: 11400000, guid: 675cbe07b69dc144a94466a1a78b93ee, type: 2}
+  - key: Hat
+    options:
+    - {fileID: 11400000, guid: 5ef7f36605df87047b4b7dc6c7763286, type: 2}
+    - {fileID: 11400000, guid: 67a09b4360e16d149909e10aadfb81a5, type: 2}
+  - key: Color
+    options:
+    - {fileID: 11400000, guid: 5df07c45451b9184991652102e319b87, type: 2}
+    - {fileID: 11400000, guid: 9b01fd91a7b2cc44396dda0818fe058b, type: 2}
+    - {fileID: 11400000, guid: 85ecd62c55ee0ae409869218aaef9e92, type: 2}
