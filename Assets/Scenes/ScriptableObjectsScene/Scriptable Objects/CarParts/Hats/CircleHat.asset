@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ad348db8ad36a840bdf3f70d62c02ab, type: 3}
   m_Name: CircleHat
   m_EditorClassIdentifier: 
-  partName: CircleHat
+  partName: Circle
   cost: 500
   HatPrefab: {fileID: 8512800689538803172, guid: 3cbcd5c922bcb474da949d38b8e1ab47,
     type: 3}

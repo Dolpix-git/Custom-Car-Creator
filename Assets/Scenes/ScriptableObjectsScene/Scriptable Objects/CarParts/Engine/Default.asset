@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55fb768db1906a544bbddf95eb356153, type: 3}
   m_Name: Default
   m_EditorClassIdentifier: 
-  partName: BaseEngine
+  partName: Default
   cost: 500
   enginePower: 30

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   carModelPrefab: {fileID: 5569968305047468768, guid: 44afb2b664030d4429fa1f1b19458167,
     type: 3}
-  carName: Model3
+  carName: Cube
   cost: 0
   carPartsLocationDict:
   - key: Wheel

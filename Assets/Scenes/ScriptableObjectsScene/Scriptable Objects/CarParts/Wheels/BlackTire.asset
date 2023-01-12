@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4abd4f60f777ce45aa9e18e728cc309, type: 3}
   m_Name: BlackTire
   m_EditorClassIdentifier: 
-  partName: BlackTire
+  partName: Black
   cost: 200
   wheelPrefab: {fileID: 6247031987940284394, guid: f80c8f7e983ac1544b566f67292f79b8,
     type: 3}
+  icon: {fileID: 0}

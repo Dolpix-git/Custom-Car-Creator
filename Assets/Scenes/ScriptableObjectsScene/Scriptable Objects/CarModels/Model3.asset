@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 753f5205892aab34a90c6bf4bf6f49ed, type: 3}
-  m_Name: CircleCar
+  m_Name: Model3
   m_EditorClassIdentifier: 
-  carModelPrefab: {fileID: 2875006913627321703, guid: 6a39064392ecd74479e77fb7efadda9f,
+  carModelPrefab: {fileID: 3522197483615930533, guid: 902874f3e0009e54990a0448fba66e2a,
     type: 3}
-  carName: Circle
-  cost: 0
+  carName: Model3
+  cost: 50000
   carPartsLocationDict:
   - key: Wheel
     location:

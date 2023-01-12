@@ -10,10 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4abd4f60f777ce45aa9e18e728cc309, type: 3}
-  m_Name: SquareTire
+  m_Name: Model3Tire
   m_EditorClassIdentifier: 
-  partName: Square
+  partName: Model3
   cost: 300
-  wheelPrefab: {fileID: 6987899494452357404, guid: bfd4bd2618109324881780633a45c20a,
-    type: 3}
+  wheelPrefab: {fileID: 0}
   icon: {fileID: 0}

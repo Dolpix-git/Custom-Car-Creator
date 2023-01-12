@@ -64,7 +64,7 @@ public class CustomizeCarUI : MonoBehaviour{
                 optionsGameobjects.Add(newPrefab);
                 newPrefab.GetComponent<Button>().onClick.AddListener(() => customCar.ChangeCarPart(key, part));
                 newPrefab.GetComponent<Button>().onClick.AddListener(() => UpdateCost());
-                newPrefab.GetComponentInChildren<TextMeshProUGUI>().text = part.name;
+                newPrefab.GetComponentInChildren<TextMeshProUGUI>().text = part.partName;
             }
         }
 
