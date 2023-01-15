@@ -388,7 +388,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b82c51f1dd7d484494477fced17f589, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraT: {fileID: 1424328398}
 --- !u!4 &396353556
 Transform:
   m_ObjectHideFlags: 0
@@ -735,6 +734,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  cameraT: {fileID: 396353556}
 --- !u!1 &1508431996
 GameObject:
   m_ObjectHideFlags: 0
@@ -783,6 +783,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d6c8d4b6ffb36e944949537fe0d2464b, type: 2}
   - {fileID: 11400000, guid: d53be0eecb038954b8dc421d8f0abb4c, type: 2}
   - {fileID: 11400000, guid: 5a927403843a3cf4eb619ff1e694c422, type: 2}
+  - {fileID: 11400000, guid: c6c709f90d6637245af311db12559792, type: 2}
   catagory:
   - key: Body
     catagoryImage: {fileID: 447609026665166777, guid: c18a0b6921830e84eab294fd70d3c5b7,

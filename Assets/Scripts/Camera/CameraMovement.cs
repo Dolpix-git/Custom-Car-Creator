@@ -39,6 +39,8 @@ public class CameraMovement : MonoBehaviour
 	private float x = 0.0f;
 	private float y = 0.0f;
 
+	[SerializeField] Transform cameraT;
+
 	void Start()
 	{
 		Vector3 angles = this.transform.eulerAngles;
@@ -50,6 +52,8 @@ public class CameraMovement : MonoBehaviour
 	{
 		if (target && Input.GetMouseButton(1))
 		{
+			cameraT.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
+
 			CameraMove();
 			rotation = Quaternion.Euler(y, x, 0);
 
