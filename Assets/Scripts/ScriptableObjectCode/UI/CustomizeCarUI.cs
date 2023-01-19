@@ -30,7 +30,7 @@ public class CustomizeCarUI : MonoBehaviour{
         catagoriesGameobjects.Clear();
 
         // spawn car body catagory
-        GameObject newPrefab = Instantiate(carDataBaseManager.catagoryDict["Body"]);
+        GameObject newPrefab = Instantiate(carDataBaseManager.catagoryDict[PartKeys.Body]);
         newPrefab.transform.SetParent(catagories.transform);
         newPrefab.name = "Body";
         catagoriesGameobjects.Add(newPrefab);
@@ -41,7 +41,7 @@ public class CustomizeCarUI : MonoBehaviour{
         foreach (var key in customCar.carData.Keys){
             newPrefab = Instantiate(carDataBaseManager.catagoryDict[key]);
             newPrefab.transform.SetParent(catagories.transform);
-            newPrefab.name = key;
+            newPrefab.name = key.ToString();
             catagoriesGameobjects.Add(newPrefab);
             newPrefab.GetComponent<Button>().onClick.AddListener(() => GenOptions(key));
             newPrefab.GetComponent<Button>().onClick.AddListener(() => UpdateCost());
@@ -49,7 +49,7 @@ public class CustomizeCarUI : MonoBehaviour{
     }
 
 
-    public void GenOptions(string key){
+    public void GenOptions(PartKeys key){
         foreach (GameObject option in optionsGameobjects){
             Destroy(option);
         }
@@ -60,7 +60,7 @@ public class CustomizeCarUI : MonoBehaviour{
             foreach (CarPart part in c){
                 GameObject newPrefab = Instantiate(optionPrefab);
                 newPrefab.transform.SetParent(options.transform);
-                newPrefab.name = key;
+                newPrefab.name = key.ToString();
                 optionsGameobjects.Add(newPrefab);
                 newPrefab.GetComponent<Button>().onClick.AddListener(() => customCar.ChangeCarPart(key, part));
                 newPrefab.GetComponent<Button>().onClick.AddListener(() => UpdateCost());

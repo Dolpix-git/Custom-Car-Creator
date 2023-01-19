@@ -40,35 +40,63 @@ public class CameraMovement : MonoBehaviour
 	private float y = 0.0f;
 
 	[SerializeField] Transform cameraT;
+	[SerializeField] Transform[] CameraAngles;
+	[SerializeField] float cameraMoveRate;
 
-	void Start()
-	{
+	private int cameraAngleIndex;
+	private bool moveingCameraToAngle;
+
+	void Start(){
 		Vector3 angles = this.transform.eulerAngles;
 		x = angles.y;
 		y = angles.x;
+        MainCameraFunction();
+    }
+
+	void LateUpdate(){
+		if (target && Input.GetMouseButton(1)){
+			MainCameraFunction();
+			moveingCameraToAngle = false;
+        }
+		if (moveingCameraToAngle){
+			transform.position = Vector3.Slerp(transform.position, CameraAngles[cameraAngleIndex].position, cameraMoveRate * Time.deltaTime);
+            transform.rotation = Quaternion.Slerp(transform.rotation, CameraAngles[cameraAngleIndex].rotation, cameraMoveRate * Time.deltaTime);
+        }
 	}
 
-	void LateUpdate()
+	public void NextCameraAngle(){
+		cameraAngleIndex++;
+		if (cameraAngleIndex >= CameraAngles.Length){
+			cameraAngleIndex = 0;
+        }
+        moveingCameraToAngle = true;
+    }
+    public void PreviousCameraAngle(){
+        cameraAngleIndex--;
+        if (cameraAngleIndex < 0){
+            cameraAngleIndex = CameraAngles.Length-1;
+        }
+		moveingCameraToAngle = true;
+    }
+
+    public void MainCameraFunction()
 	{
-		if (target && Input.GetMouseButton(1))
-		{
-			cameraT.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
+        cameraT.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
 
-			CameraMove();
-			rotation = Quaternion.Euler(y, x, 0);
+        CameraMove();
+        rotation = Quaternion.Euler(y, x, 0);
 
-			if (distance < distanceMax)
-			{
-				distance = Mathf.Lerp(distance, distanceMax, Time.deltaTime * 2f);
-			}
+        if (distance < distanceMax)
+        {
+            distance = Mathf.Lerp(distance, distanceMax, Time.deltaTime * 2f);
+        }
 
-			Vector3 distanceVector = new Vector3(0.0f, 0.0f, -distance);
-			Vector3 position = rotation * distanceVector + target.position;
-			transform.rotation = rotation;
-			transform.position = position;
-			CameraCollision();
-		}
-	}
+        Vector3 distanceVector = new Vector3(0.0f, 0.0f, -distance);
+        Vector3 position = rotation * distanceVector + target.position;
+        transform.rotation = rotation;
+        transform.position = position;
+        CameraCollision();
+    }
 
 	public void CameraMove()
 	{

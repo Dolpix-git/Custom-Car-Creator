@@ -12,9 +12,9 @@ public class CarModel : ScriptableObject, ISerializationCallbackReceiver{
     public CarPartsLocationDict[] carPartsLocationDict;
     public CarPartsDict[] carPartsDict;
 
-    public Dictionary<string, Vector3[]> carPartsLocation = new Dictionary<string, Vector3[]>();
-    public Dictionary<string, float[]> carPartsRotation = new Dictionary<string, float[]>();
-    public Dictionary<string, CarPart[]> carParts = new Dictionary<string, CarPart[]>();
+    public Dictionary<PartKeys, Vector3[]> carPartsLocation = new Dictionary<PartKeys, Vector3[]>();
+    public Dictionary<PartKeys, float[]> carPartsRotation = new Dictionary<PartKeys, float[]>();
+    public Dictionary<PartKeys, CarPart[]> carParts = new Dictionary<PartKeys, CarPart[]>();
 
     public void OnAfterDeserialize(){
         try{
@@ -60,21 +60,29 @@ public class CarModel : ScriptableObject, ISerializationCallbackReceiver{
     }
 }
 
+public enum PartKeys{
+    Body,
+    Wheel,
+    Hat,
+    Paint,
+    Engine
+}
+
 [Serializable]
 public class CarPartsLocationDict{
-    [SerializeField] private string key;
+    [SerializeField] private PartKeys key;
     [SerializeField] private Vector3[] location;
     [SerializeField] private float[] rotation;
 
-    public string Key { get => key; set => key = value; }
+    public PartKeys Key { get => key; set => key = value; }
     public Vector3[] Location { get => location; set => location = value; }
     public float[] Rotation { get => rotation; set => rotation = value; }
 }
 [Serializable]
 public class CarPartsDict{
-    [SerializeField] private string key;
+    [SerializeField] private PartKeys key;
     [SerializeField] private CarPart[] options;
 
-    public string Key { get => key; set => key = value; }
+    public PartKeys Key { get => key; set => key = value; }
     public CarPart[] Options { get => options; set => options = value; }
 }

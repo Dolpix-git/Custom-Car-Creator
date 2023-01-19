@@ -11,13 +11,13 @@ public class CarDataBaseManager : MonoBehaviour{
 
     public CatagoryImage[] catagory;
 
-    public Dictionary<string, GameObject> catagoryDict;
+    public Dictionary<PartKeys, GameObject> catagoryDict;
 
     private void Awake(){
         customizedCar = transform.GetComponent<CustomizedCar>();
         LoadCar(CarDataBase[0]);
 
-        catagoryDict = new Dictionary<string, GameObject>(0);
+        catagoryDict = new Dictionary<PartKeys, GameObject>();
         foreach (var item in catagory){
             catagoryDict.Add(item.key,item.catagoryImage);
         }
@@ -30,6 +30,6 @@ public class CarDataBaseManager : MonoBehaviour{
 
 [Serializable]
 public class CatagoryImage{
-    public string key;
+    public PartKeys key;
     public GameObject catagoryImage;
 }

@@ -17,7 +17,7 @@ MonoBehaviour:
   carName: Domino
   cost: 1200
   carPartsLocationDict:
-  - key: Wheel
+  - key: 1
     location:
     - {x: 1.15, y: 0, z: 0.7}
     - {x: 1.15, y: 0, z: -0.7}
@@ -28,24 +28,24 @@ MonoBehaviour:
     - 180
     - 0
     - 180
-  - key: Hat
+  - key: 2
     location:
     - {x: 0, y: 0.9, z: 0}
     rotation:
     - 0
   carPartsDict:
-  - key: Wheel
+  - key: 1
     options:
     - {fileID: 11400000, guid: d89e0775741758e4ebbf1765726c31d0, type: 2}
     - {fileID: 11400000, guid: 675cbe07b69dc144a94466a1a78b93ee, type: 2}
-  - key: Hat
+  - key: 2
     options:
     - {fileID: 11400000, guid: 5ef7f36605df87047b4b7dc6c7763286, type: 2}
     - {fileID: 11400000, guid: 67a09b4360e16d149909e10aadfb81a5, type: 2}
-  - key: Engine
+  - key: 4
     options:
     - {fileID: 11400000, guid: 15bd9b37367f7f34981dbff199dcb5cb, type: 2}
-  - key: Color
+  - key: 3
     options:
     - {fileID: 11400000, guid: 5df07c45451b9184991652102e319b87, type: 2}
     - {fileID: 11400000, guid: f2ff27da3b3809140ad12054e7cf5bc9, type: 2}
