@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   partName: Model3
   cost: 300
-  wheelPrefab: {fileID: 0}
+  wheelPrefab: {fileID: 3979131203506811542, guid: afbbab25cddd02342ae94f411fd4e996,
+    type: 3}
   icon: {fileID: 0}

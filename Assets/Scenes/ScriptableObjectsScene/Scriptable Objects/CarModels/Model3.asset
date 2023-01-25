@@ -21,8 +21,8 @@ MonoBehaviour:
     location:
     - {x: 1.45, y: 0, z: 1}
     - {x: 1.45, y: 0, z: -1}
-    - {x: -1.8, y: 0, z: 1}
-    - {x: -1.8, y: 0, z: -1}
+    - {x: -1.75, y: 0, z: 1}
+    - {x: -1.75, y: 0, z: -1}
     rotation:
     - 0
     - 180
@@ -38,6 +38,7 @@ MonoBehaviour:
     options:
     - {fileID: 11400000, guid: d89e0775741758e4ebbf1765726c31d0, type: 2}
     - {fileID: 11400000, guid: 675cbe07b69dc144a94466a1a78b93ee, type: 2}
+    - {fileID: 11400000, guid: 739892b49878a9f4f8f3ebcdd29f5195, type: 2}
   - key: 2
     options:
     - {fileID: 11400000, guid: 5ef7f36605df87047b4b7dc6c7763286, type: 2}
